@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Shop";
+}
+<form method="get" action="@Url.Action("Shop")">
+    <table>
+        <tr>
+            <img style="width: 330px; height: 400px;" src="~/images/damskariza1.jpg">
+        </tr>
+        <tr>
+            <td>@ViewBag.Gender</td>
+        </tr>
+        <tr>
+            <td>@ViewBag.TypeOfCloth</td>
+        </tr>
+        <tr>
+            <td>@ViewBag.Size</td>
+        </tr>
+        <tr>
+            <td>@ViewBag.Price</td>
+        </tr>
+    </table>
+    <button type="submit">Добави в кошницата</button>
+</form>
+
