@@ -21,6 +21,7 @@ namespace hopTropOnlineShop.DAL
         public DbSet<Delivery> Deliveries { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<WishListCloth> WishListClothes { get; set; }
+        public DbSet<User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Cloth>().ToTable("Cloth");  
@@ -29,6 +30,7 @@ namespace hopTropOnlineShop.DAL
             modelBuilder.Entity<Delivery>().ToTable("Delivery");
             modelBuilder.Entity<Order>().ToTable("Order");
             modelBuilder.Entity<WishListCloth>().ToTable("WishListCloth");
+            modelBuilder.Entity<User>().ToTable("User");
         }
     }
 }

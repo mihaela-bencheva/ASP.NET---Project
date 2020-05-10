@@ -16,34 +16,16 @@ namespace hopTropOnlineShop.Controllers
     public class ClothController : Controller
     {
         private readonly OnlineShopContext _context;
+        private IRepository _repository;
 
-        public ClothController(OnlineShopContext context)
+        public ClothController(OnlineShopContext context, IRepository repository)
         {
             _context = context;
-            /*public ActionResult Shop()
+            _repository = repository;
+        }
+            public ActionResult Shop()
              {
-                 List<Cloth> clothes = new List<Cloth>(); 
-                 clothes.Add(new Cloth
-                 {
-                     IDCloth = 1,
-                     Gender = "Дамска",
-                     TypeOfCloth = "Кенарена риза",
-                     Size = "XS, S, M, L, XL",
-                     Color = "Бяла",
-                     Price = 39.90,
-                     Currency = "лв."
-                 });
-
-                 clothes.Add(new Cloth
-                 {
-                     IDCloth = 2,
-                     Gender = "Мъжка",
-                     TypeOfCloth = "Кенарена риза",
-                     Size = "XS, S, M, L, XL",
-                     Color = "Синя",
-                     Price = 49.90,
-                     Currency = "лв."
-                 });
+                 List<Cloth> clothes = _repository.GetAllClothes();
                  //Creating the View model
                  ClothesDetailsViewModel clothesDetailsViewModel = new ClothesDetailsViewModel()
                  {
@@ -57,12 +39,12 @@ namespace hopTropOnlineShop.Controllers
             private ViewResult View(ClothesDetailsViewModel clothesDetailsViewModel)
              {
                  throw new NotImplementedException();
-             }*/
+             }
 
-        }
-        public async Task<IActionResult> Shop()
-        {
-            return View(await _context.Clothes.ToListAsync());
-        }
+       
+        //public async Task<IActionResult> Shop()
+        //{
+        //    return View(await _context.Clothes.ToListAsync());
+        //}
     }
 }

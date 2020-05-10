@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using hopTropOnlineShop.Models;
 using Eco.ViewModel.Runtime;
+using hopTropOnlineShop.DAL;
 
 namespace hopTropOnlineShop.Controllers
 {
@@ -14,9 +15,21 @@ namespace hopTropOnlineShop.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+       // public IRepository _repository;
+        public HomeController(ILogger<HomeController> logger) //IRepository repository)
         {
             _logger = logger;
+            //_repository = repository;
+        }
+
+        public IActionResult LoginCheck([FromForm] User loginUser)
+        {
+            return View();
+        }
+
+        public IActionResult Login()
+        {
+            return View();
         }
 
         public IActionResult Index()

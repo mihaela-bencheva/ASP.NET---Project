@@ -1,4 +1,4 @@
-﻿@model IEnumerable<hopTropOnlineShop.Models.Cloth>
+﻿@model hopTropOnlineShop.ViewModels.ClothesDetailsViewModel
 @{
     ViewData["Title"] = "Shop";
 }
@@ -28,7 +28,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
+            @foreach (var item in Model.Clothes)
             {
             <tr>
                 <td>
