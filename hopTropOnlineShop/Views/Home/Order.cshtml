@@ -1,0 +1,41 @@
+﻿@model hopTropOnlineShop.Models.Customer
+@{
+    ViewData["Title"] = "Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <form asp-action="CreateCustomerOrder" asp-controller="Customer" method="post">
+        <div class="form-group">
+            <label asp-for="FirstName">Първо име</label>
+            <input asp-for="FirstName" type="text" class="form-control" id="FirstName">
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName">Фамилия</label>
+            <input asp-for="LastName" type="text" class="form-control" id="exampleInputEmail1">
+        </div>
+        <div class="form-group">
+            <label asp-for="Address">Адрес</label>
+            <input asp-for="Address" type="text" class="form-control" id="exampleInputEmail1">
+        </div>
+        <div class="form-group">
+            <label asp-for="TelephoneNumber">Телефон</label>
+            <input asp-for="TelephoneNumber" type="tel" class="form-control" id="exampleInputEmail1">
+        </div>
+        <div class="form-group">
+            <label asp-for="Email">Email address</label>
+            <input asp-for="Email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+@*<form>
+    Първо име: <input type="text" placeholder="Пенка" />
+    Фамилия: <input type="text" placeholder="Пенкова" />
+    Адрес: <input type="text" placeholder="София, ул. Нещо си там, №60" />
+    Телефон: <input type="tel" placeholder="0459835987" />
+    Email:  <input type="email" placeholder="yourEmail@email.com" />
+    <button type="submit">Поръчвам</button>
+</form>*@
