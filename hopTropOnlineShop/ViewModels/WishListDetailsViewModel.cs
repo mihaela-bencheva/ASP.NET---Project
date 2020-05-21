@@ -8,7 +8,7 @@ namespace hopTropOnlineShop.ViewModels
 {
     public class WishListDetailsViewModel
     {
-        public Basket Basket { get; set; }
-        public Cloth Cloth { get; set; }
+        public List<Cloth> Clothes { get; set; }
+        public int IDUser { get; set; }
     }
 }

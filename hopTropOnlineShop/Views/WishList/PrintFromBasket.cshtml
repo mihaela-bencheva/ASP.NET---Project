@@ -1,0 +1,69 @@
+﻿@model hopTropOnlineShop.ViewModels.WishListDetailsViewModel
+
+@{
+    ViewData["Title"] = "PrintFromBasket";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (Model.Clothes.Count > 0)
+{
+    <form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Clothes[0].Gender)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Clothes[0].TypeOfCloth)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Clothes[0].Size)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Clothes[0].Color)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Clothes[0].Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Clothes[0].Currency)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Clothes)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TypeOfCloth)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Size)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Color)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Currency)
+                    </td>
+                  
+                </tr>
+                }
+            </tbody>
+        </table>
+    </form>
+}
+
+@if (@Model.IDUser > 0)
+{
+<button onclick="location.href='@Url.Action("Order", "Home")'" type="button">Поръчвам</button>
+}
+
+

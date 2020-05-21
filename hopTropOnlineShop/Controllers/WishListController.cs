@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using hopTropOnlineShop.DAL;
-using hopTropOnlineShop.Helpers;
 using hopTropOnlineShop.Models;
+using hopTropOnlineShop.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace hopTropOnlineShop.Controllers
 {
+    [Route("[controller]")]
     public class WishListController : Controller
     {
         private IRepository _repository;
@@ -31,18 +32,24 @@ namespace hopTropOnlineShop.Controllers
         public IActionResult PrintFromBasket()
         {
             string[] clothesIds = (HttpContext.Session.GetString("cart") ?? string.Empty).Split(',', StringSplitOptions.RemoveEmptyEntries);
-            if (clothesIds.Length == 0)
-            {
-                return BadRequest();
-            }
+            //if (clothesIds.Length == 0)
+            //{
+            //    return BadRequest();
+            //}
 
-            Cloth[] clothes = new Cloth[clothesIds.Length];
+            List<Cloth> clothes = new List<Cloth>();
             for (int i = 0; i < clothesIds.Length; i++)
             {
-                clothes[i] = _repository.GetClothById(Convert.ToInt32(clothesIds[i]));
+                clothes.Add(_repository.GetClothById(Convert.ToInt32(clothesIds[i])));
             }
 
-            return Ok(clothes.ToList());
+            WishListDetailsViewModel wishListDetailsViewModel = new WishListDetailsViewModel()
+            {
+                IDUser = Convert.ToInt32(HttpContext.Session.GetString("identity")),
+                Clothes = clothes
+            };
+
+            return View(wishListDetailsViewModel);
         }
     }
 }

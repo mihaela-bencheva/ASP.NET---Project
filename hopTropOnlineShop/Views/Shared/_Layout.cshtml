@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model hopTropOnlineShop.Models.User
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -29,17 +30,18 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="News">Новини</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Basket">Кошница</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="WishList" asp-action="PrintFromBasket">Кошница</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Log in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Order">Поръчки</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Register" asp-action="Register">Register</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Basket" asp-action="Details">Cart</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="LogOut">Log Out</a>
                         </li>
+                        <p>@Model.Username</p>
                     </ul>
                 </div>
             </div>

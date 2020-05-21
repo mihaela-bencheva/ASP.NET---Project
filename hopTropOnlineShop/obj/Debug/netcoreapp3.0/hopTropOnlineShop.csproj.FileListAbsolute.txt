@@ -124,7 +124,6 @@ C:\Users\VikS\source\repos\hopTropOnlineShop\bin\Debug\netcoreapp3.0\runtimes\wi
 C:\Users\VikS\source\repos\hopTropOnlineShop\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Home\News.cshtml.g.cs
-C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Home\Basket.cshtml.g.cs
 C:\Users\VikS\source\repos\hopTropOnlineShop\bin\Debug\netcoreapp3.0\Eco.Handles.dll
 C:\Users\VikS\source\repos\hopTropOnlineShop\bin\Debug\netcoreapp3.0\Eco.Interfaces.dll
 C:\Users\VikS\source\repos\hopTropOnlineShop\bin\Debug\netcoreapp3.0\Eco.LinqExtender.dll
@@ -154,7 +153,6 @@ C:\Users\VikS\source\repos\hopTropOnlineShop\bin\Debug\netcoreapp3.0\runtimes\un
 C:\Users\VikS\source\repos\hopTropOnlineShop\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\VikS\source\repos\hopTropOnlineShop\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
 C:\Users\VikS\source\repos\hopTropOnlineShop\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\VikS\source\repos\hopTropOnlineShop\bin\Debug\netcoreapp3.0\hopTropOnlineShop.StaticWebAssets.xml
 C:\Users\VikS\source\repos\hopTropOnlineShop\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
 C:\Users\VikS\source\repos\hopTropOnlineShop\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
@@ -165,6 +163,7 @@ C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\hopTropOnli
 C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Cloth\Shop.cshtml.g.cs
 C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Home\Order.cshtml.g.cs
-C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Basket\Details.cshtml.g.cs
 C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Customer\CreateCustomerOrder.cshtml.g.cs
 C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Login\Login.cshtml.g.cs
+C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\WishList\PrintFromBasket.cshtml.g.cs
+C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Register\Register.cshtml.g.cs

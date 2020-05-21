@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using hopTropOnlineShop.Models;
-using hopTropOnlineShop.Helpers;
 using hopTropOnlineShop.DAL;
+using Microsoft.AspNetCore.Http;
 
 namespace hopTropOnlineShop.Controllers
 {
@@ -39,14 +39,24 @@ namespace hopTropOnlineShop.Controllers
             {
                 foreach(User u in users)
                 {
-                    if (u.Password == loginUser.Password)
+                 
+                    if (u.Password == loginUser.Password && u.Username == loginUser.Username)
                     {
+                        HttpContext.Session.SetString("identity", u.IDUser.ToString());
+                        //HttpContext.Session.GetString("identity");
                         return RedirectToActionPermanent("Index", "Home", null);
                     }
                 }
                 return Ok();
             }
             return View();
+        }
+
+        [HttpGet("[action]")]
+        public IActionResult LogOut()
+        {
+            HttpContext.Session.SetString("identity", (0).ToString());
+            return RedirectToActionPermanent("Shop", "Cloth", null);
         }
     }
 }

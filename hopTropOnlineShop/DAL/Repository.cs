@@ -60,6 +60,18 @@ namespace hopTropOnlineShop.DAL
             return users;
         }
 
+        public void CreateUser(User user)
+        {
+            _context.Users.Add(user);
+            _context.SaveChanges();
+        }
+
+        public User GetUserByID(int id)
+        {
+            User user = _context.Users.Where(x => x.IDUser == id).FirstOrDefault();
+            return user;
+        }
+
 
 
         //public bool IsUserAuthenticated(byte[] userIdentity)

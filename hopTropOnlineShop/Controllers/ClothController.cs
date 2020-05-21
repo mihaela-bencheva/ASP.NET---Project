@@ -35,7 +35,7 @@ namespace hopTropOnlineShop.Controllers
                    Clothes = clothes,
                  }; 
 
-                 return base.View(clothesDetailsViewModel);
+                 return View(clothesDetailsViewModel);
              }
 
 
