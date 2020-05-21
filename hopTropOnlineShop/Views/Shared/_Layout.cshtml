@@ -1,5 +1,4 @@
-﻿@model hopTropOnlineShop.Models.User
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -41,7 +40,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="LogOut">Log Out</a>
                         </li>
-                        <p>@Model.Username</p>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="CurrentUser"><img src="~/images/userpfp.png" style="width: 25px;height: 25px;" /></a>
+                        </li>
                     </ul>
                 </div>
             </div>

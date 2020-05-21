@@ -8,7 +8,7 @@ namespace hopTropOnlineShop.DAL
 {
     public interface IRepository
     {
-       // public bool CreateCloth(Cloth cloth);
+        public void CreateCloth(Cloth cloth);
         public void CreateUser(User user);
         public User GetUserByID(int id);
        // public List<User> GetAllUser();

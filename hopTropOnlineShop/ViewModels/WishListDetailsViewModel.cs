@@ -9,6 +9,7 @@ namespace hopTropOnlineShop.ViewModels
     public class WishListDetailsViewModel
     {
         public List<Cloth> Clothes { get; set; }
+        public double Sum { get; set; }
         public int IDUser { get; set; }
     }
 }

@@ -11,7 +11,6 @@ using Microsoft.Extensions.Hosting;
 using hopTropOnlineShop.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 
 namespace hopTropOnlineShop
 {

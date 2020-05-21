@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Eco.Ocl.Support;
 using hopTropOnlineShop.DAL;
 using hopTropOnlineShop.Models;
 using hopTropOnlineShop.ViewModels;
@@ -38,15 +39,19 @@ namespace hopTropOnlineShop.Controllers
             //}
 
             List<Cloth> clothes = new List<Cloth>();
+            double sum = 0;
             for (int i = 0; i < clothesIds.Length; i++)
             {
-                clothes.Add(_repository.GetClothById(Convert.ToInt32(clothesIds[i])));
+                Cloth cloth = _repository.GetClothById(Convert.ToInt32(clothesIds[i]));
+                clothes.Add(cloth);
+                sum += cloth.Price;
             }
 
             WishListDetailsViewModel wishListDetailsViewModel = new WishListDetailsViewModel()
             {
                 IDUser = Convert.ToInt32(HttpContext.Session.GetString("identity")),
-                Clothes = clothes
+                Clothes = clothes,
+                Sum = Math.Round(sum, 2)
             };
 
             return View(wishListDetailsViewModel);

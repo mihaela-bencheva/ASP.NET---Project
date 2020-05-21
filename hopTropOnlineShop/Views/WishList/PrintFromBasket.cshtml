@@ -63,6 +63,7 @@
 
 @if (@Model.IDUser > 0)
 {
+<p>Крайна сума: @Model.Sum @Html.DisplayFor(model => model.Clothes[0].Currency)</p>
 <button onclick="location.href='@Url.Action("Order", "Home")'" type="button">Поръчвам</button>
 }
 

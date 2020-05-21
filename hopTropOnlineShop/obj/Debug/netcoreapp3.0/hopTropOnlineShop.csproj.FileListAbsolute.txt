@@ -167,3 +167,5 @@ C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views
 C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Login\Login.cshtml.g.cs
 C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\WishList\PrintFromBasket.cshtml.g.cs
 C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Register\Register.cshtml.g.cs
+C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Login\CurrentUser.cshtml.g.cs
+C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Cloth\CreateCloth.cshtml.g.cs

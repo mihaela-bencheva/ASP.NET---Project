@@ -58,4 +58,13 @@
         </tbody>
     </table>
 </form>
+@if (Model.User != null)
+{
+    @if (Model.User.IsAdministrator)
+    {
+        <button onclick="location.href='@Url.Action("CreateCloth", "Cloth")'" type="button">Добави нова дреха</button>
+    }
+}
+
+
 

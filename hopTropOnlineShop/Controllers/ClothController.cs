@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using hopTropOnlineShop.DAL;
-
-
+using Microsoft.AspNetCore.Http;
 
 namespace hopTropOnlineShop.Controllers
 {
@@ -30,14 +29,38 @@ namespace hopTropOnlineShop.Controllers
         public IActionResult Shop()
              {
                  List<Cloth> clothes = _repository.GetAllClothes();
+                 User user = _repository.GetUserByID(Convert.ToInt32(HttpContext.Session.GetString("identity")));
                  ClothesDetailsViewModel clothesDetailsViewModel = new ClothesDetailsViewModel()
                  {
                    Clothes = clothes,
+                   User = user
                  }; 
 
                  return View(clothesDetailsViewModel);
              }
 
+        [HttpGet("[action]")]
+        public IActionResult CreateCloth()
+        {
+            int UserId = Convert.ToInt32(HttpContext.Session.GetString("identity"));
+            if (UserId > 0)
+            {
+                User user = _repository.GetUserByID(UserId);
+                if (user.IsAdministrator)
+                {
+                    return View();
+                }
+                return RedirectToActionPermanent("Login", "Login", null);
+            }
+            return RedirectToActionPermanent("Login", "Login", null);
+        }
+
+        [HttpPost("[action]")]
+        public IActionResult CreateCloth([FromForm] Cloth cloth)
+        {
+            _repository.CreateCloth(cloth);
+            return RedirectToActionPermanent("Shop", "Cloth", null);
+        }
 
        
         //public async Task<IActionResult> Shop()

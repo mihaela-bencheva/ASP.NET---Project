@@ -53,6 +53,18 @@ namespace hopTropOnlineShop.Controllers
         }
 
         [HttpGet("[action]")]
+        public IActionResult CurrentUser()
+        {
+           int UserId = Convert.ToInt32(HttpContext.Session.GetString("identity"));
+            if (UserId > 0)
+            {
+                User user = _repository.GetUserByID(UserId);
+                return View(user);
+            }
+            return RedirectToActionPermanent("Login", "Login", null);
+        }
+
+        [HttpGet("[action]")]
         public IActionResult LogOut()
         {
             HttpContext.Session.SetString("identity", (0).ToString());

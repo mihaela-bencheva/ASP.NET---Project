@@ -15,6 +15,7 @@ namespace hopTropOnlineShop.ViewModels
         public string Color { get; set; }
         public double Price { get; set; }
         public string Currency { get; set; }
+        public User User { get; set; }
         public List<Cloth> Clothes { get; internal set; } 
     }
 }

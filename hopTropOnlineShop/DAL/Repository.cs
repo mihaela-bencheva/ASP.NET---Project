@@ -14,12 +14,11 @@ namespace hopTropOnlineShop.DAL
             _context = context;
         }
 
-        // public bool CreateCloth(Cloth cloth)
-        // {
-        //     _context.Clothes.Add(cloth);
-        //     _context.SaveChanges();
-        //     return true;
-        // }
+        public void CreateCloth(Cloth cloth)
+        {
+            _context.Clothes.Add(cloth);
+            _context.SaveChanges();
+        }
 
         // public bool CreateUser(User user)
         // {
