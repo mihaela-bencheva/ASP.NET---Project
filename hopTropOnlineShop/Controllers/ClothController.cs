@@ -58,14 +58,26 @@ namespace hopTropOnlineShop.Controllers
         [HttpPost("[action]")]
         public IActionResult CreateCloth([FromForm] Cloth cloth)
         {
-            _repository.CreateCloth(cloth);
-            return RedirectToActionPermanent("Shop", "Cloth", null);
+            if (ModelState.IsValid)
+            {
+                _repository.CreateCloth(cloth);
+                return RedirectToActionPermanent("Shop", "Cloth", null);
+            }
+            return View(cloth);
         }
 
-       
-        //public async Task<IActionResult> Shop()
-        //{
-        //    return View(await _context.Clothes.ToListAsync());
-        //}
+       [HttpGet("[action]")]
+       public IActionResult SearchCloth(string searchString)
+        {
+            var clothes = from r in _repository.GetAllClothes()
+                         select r;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                clothes = clothes.Where(r => r.Equals(searchString));
+            }
+
+            return View(clothes);
+        }
     }
 }

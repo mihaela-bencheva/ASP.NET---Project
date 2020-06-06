@@ -4,7 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <div class="row">
+
+<h3>Регистрация</h3>
+    <div class="row" style="text-align: center;">
         <div class="col-md-4">
             <form asp-action="Register" asp-controller="Register" method="post">
                 <div class="form-group">
@@ -18,7 +20,7 @@
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Register" class="btn btn-default" />
+                    <button type="submit" class="btn btn-default" style="border-color: hotpink; background-color: lightpink; color: salmon;">Register</button>
                 </div>
             </form>
         </div>

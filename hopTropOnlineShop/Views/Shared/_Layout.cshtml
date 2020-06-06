@@ -7,12 +7,14 @@
     <link rel="icon" href="~/favicon.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <a id="top"></a>
+    <header style="font-size: 20px;">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Ризи Хоп Троп</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="font-size: 30px;"><img style="width: 45px;height: 60px;" src="~/images/kalpak.png"/>Ризи Хоп Троп</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,25 +22,25 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cloth" asp-action="Shop">Магазин</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cloth" asp-action="Shop" style="color: white;">Магазин</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Контакти</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy" style="color: white;">Контакти</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="News">Новини</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="News" style="color: white;">Новини</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="WishList" asp-action="PrintFromBasket">Кошница</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="WishList" asp-action="PrintFromBasket" style="color: white;">Кошница</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Log in</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login" style="color: white;">Log in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Register" asp-action="Register">Register</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Register" asp-action="Register" style="color: white;">Register</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="LogOut">Log Out</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="LogOut" style="color: white;">Log Out</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="CurrentUser"><img src="~/images/userpfp.png" style="width: 25px;height: 25px;" /></a>
@@ -51,12 +53,17 @@
     <div class="text-center">
         <img style="width: 370px; height: 250px;" src="~/images/hoptrop.png">
     </div>
+    <div class="menu"></div>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
+    <button class="scroll-top page-scroll">
+        <a class="button-scroll" href="#top">
+            <img src="~/images/arrow.png"
+                 style="width: 30px;height: 30px;">
+    </button>
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2020 - HopTropOnlineShop - <a asp-area="" asp-controller="Home" asp-action="Contacts">Privacy</a>

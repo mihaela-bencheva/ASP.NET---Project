@@ -3,34 +3,42 @@
     ViewData["Title"] = "News";
 }
 
-    <div style="display: inline;vertical-align: middle;">
-        <div class="card" style="width: 18rem;">
-            <img src="~/images/news1.jpg" class="card-img-top" alt="...">
+<body>
+    <div style="padding: 40px;">
+        <div class="card" style="width: 20rem;height: 28rem; display: inline-block; vertical-align: middle;padding:10px; background-color: darksalmon;">
+            <img src="~/images/news1.jpg" class="card-img-top" alt="..." style="height: 240px;">
             <div class="card-body">
                 <h5 class="card-title">Шевица – видимото изражение на онова, което носим в себе си</h5>
-                <p class="card-text">
+                <div style="white-space: nowrap; width: 255px; overflow: hidden; text-overflow:ellipsis">
                     Тя е предаване на родова памет, на история, на древно знание, наследено чрез културните традиции на предците ни.
                     Самата шевица е видимото изражение на онова, което носим в съзнанието си – любов, на онова, което родовата памет пази вътре в нас – сила и история!
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <button type="button" class="btn btn-primary" style="margin: 10px; border-color: hotpink;" onclick="location.href='@Url.Action("PrintInfoCardShevitsa", "News")'">Learn more</button>
             </div>
         </div>
 
-        <div class="card" style="width: 18rem;">
-            <img src="~/images/news2.jpg" class="card-img-top" alt="...">
+        <div class="card" style="width: 20rem;height: 28rem;display: inline-block; vertical-align: middle;padding: 10px;background-color: darksalmon;">
+            <img src="~/images/symbol.jpg" class="card-img-top" alt="..." style="height: 240px;">
             <div class="card-body">
                 <h5 class="card-title">Символизирането на рода в българската шевица</h5>
-                <p class="card-text">Произходът на българската шевица е тясно свързан с най-древните вярвания на народа ни. Принадлежността към род, народ и история се свързват в едно и чрез това се определя смисълът на човешкия живот.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div style="white-space: nowrap; width: 255px; overflow: hidden; text-overflow:ellipsis">
+                    Произходът на българската шевица е тясно свързан с най-древните вярвания на народа ни.
+                    Принадлежността към род, народ и история се свързват в едно и чрез това се определя смисълът на човешкия живот.
+                </div>
+                <button type="button" class="btn btn-primary" style="margin: 34px; border-color: hotpink;" onclick="location.href='@Url.Action("PrintInfoCardSymbol", "News")'">Learn more</button>
             </div>
         </div>
 
-        <div class="card" style="width: 18rem;">
-            <img src="~/images/news3.jpg" class="card-img-top" alt="...">
+        <div class="card" style="width: 20rem;height: 28rem;display: inline-block; vertical-align: middle;padding: 10px;background-color: darksalmon;">
+            <img src="~/images/ornaments.jpg" class="card-img-top" alt="..." style="height: 240px;">
             <div class="card-body">
                 <h5 class="card-title">Различните орнаменти</h5>
-                <p class="card-text">Различните орнаменти, везбани в отделните шевици представляват знаци и символи, в които е закодирано невероятно послание.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div style="white-space: nowrap; width: 250px; overflow: hidden; text-overflow:ellipsis">
+                    Различните орнаменти, везбани в отделните шевици представляват знаци и символи,
+                    в които е закодирано невероятно послание.
+                </div>
+                <button type="button" class="btn btn-primary" style="margin: 58px; border-color: hotpink;" onclick="location.href='@Url.Action("PrintInfoCardOrnaments", "News")'">Learn more</button>
             </div>
         </div>
     </div>
+</body>
