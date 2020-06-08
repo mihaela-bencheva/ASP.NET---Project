@@ -7,3 +7,11 @@
 <h1>CurrentUser</h1>
 <img src="~/images/profile.jpg"/>
 <p>@Model.Username</p>
+
+@if (Model != null)
+{
+    if (Model.IsAdministrator = true)
+    {
+        <button onclick="location.href='@Url.Action("ShowAllUsersToAdmin", "Login")'" type="button">Покажи всички потребители</button>
+    }
+}

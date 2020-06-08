@@ -1,7 +1,7 @@
-﻿
-@model hopTropOnlineShop.ViewModels.ClothesDetailsViewModel
+﻿@model hopTropOnlineShop.ViewModels.ClothesDetailsViewModel
 @{
-    ViewData["Title"] = "Shop";
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <style>
@@ -431,6 +431,7 @@
         </tbody>
     </table>
 </form>
+
 @if (Model.User != null)
 {
     @if (Model.User.IsAdministrator)

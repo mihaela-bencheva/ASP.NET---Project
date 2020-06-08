@@ -1,4 +1,5 @@
 ﻿using hopTropOnlineShop.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,25 +72,39 @@ namespace hopTropOnlineShop.DAL
             return user;
         }
 
+        public List<Cloth> GetClothesByPattern(string pattern)
+        {
+            List<Cloth> patternCloth = _context.Clothes.Where(x => x.TypeOfCloth.Contains(pattern)).ToList();
+            return patternCloth;
+        }
 
+        public List<User> GetAllUsers()
+        {
+            List<User> users = _context.Users.ToList();
+            return users; 
+        }
 
-        //public bool IsUserAuthenticated(byte[] userIdentity)
-        //{
-        //    if (userIdentity != null)
-        //    {
-        //        return _context.Users.Any(u => u.Identity == new Guid(userIdentity));
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
+        public void DeleteUserByID(int id)
+        {
+            User user = (User)_context.Users.FirstOrDefault(x => x.IDUser == id);
+            if (user != null)
+            {
+                _context.Entry(user).State = EntityState.Deleted;
+                _context.SaveChanges();
+               // _context.Users.Remove(user);
+            }
+        }
 
-        //public User GetUserByIdentity(Guid guid)
-        //    => _context.Users.Where(x => x.Identity == guid).SingleOrDefault();
+        public void SetUserToAdminByID(int id)
+        {
+            User user = (User)_context.Users.FirstOrDefault(x => x.IDUser == id);
+            if (user != null)
+            {
+                user.IsAdministrator = true;
+                _context.SaveChanges();
+            }
+        }
 
-        //public List<Restaurant> GetAllRestaurants()
-        //    => _context.Restaurants.ToList();
     }
 }
 

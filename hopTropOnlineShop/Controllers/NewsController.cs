@@ -6,18 +6,22 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace hopTropOnlineShop.Controllers
 {
+    [Route("[controller]")]
     public class NewsController : Controller
     {
+        [HttpGet("[action]")]
         public IActionResult PrintInfoCardShevitsa()
         {
             return View();
         }
 
+        [HttpGet("[action]")]
         public IActionResult PrintInfoCardSymbol()
         {
             return View();
         }
 
+        [HttpGet("[action]")]
         public IActionResult PrintInfoCardOrnaments()
         {
             return View();

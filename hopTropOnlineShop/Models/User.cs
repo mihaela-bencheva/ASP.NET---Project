@@ -11,10 +11,12 @@ namespace hopTropOnlineShop.Models
         [Key]
         public int IDUser { get; set; }
         [Required]
+        [StringLength(20)]
         public string Username { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
+        [StringLength(20)]
         public string Password { get; set; }
 
         public int IDCustomer { get; set; }

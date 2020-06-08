@@ -27,7 +27,7 @@ namespace hopTropOnlineShop.Controllers
         
         [HttpGet("[action]")]
         public IActionResult Shop()
-             {
+             { 
                  List<Cloth> clothes = _repository.GetAllClothes();
                  User user = _repository.GetUserByID(Convert.ToInt32(HttpContext.Session.GetString("identity")));
                  ClothesDetailsViewModel clothesDetailsViewModel = new ClothesDetailsViewModel()
@@ -69,15 +69,22 @@ namespace hopTropOnlineShop.Controllers
        [HttpGet("[action]")]
        public IActionResult SearchCloth(string searchString)
         {
-            var clothes = from r in _repository.GetAllClothes()
-                         select r;
+            List<Cloth> clothes = _repository.GetClothesByPattern(searchString);
+            return RedirectToActionPermanent("Shop", "Cloth", clothes);
+        }
 
-            if (!String.IsNullOrEmpty(searchString))
+        [HttpGet("[action]")]
+        public IActionResult Search(string searchString)
+        {
+            List<Cloth> clothes = _repository.GetClothesByPattern(searchString);
+            User user = _repository.GetUserByID(Convert.ToInt32(HttpContext.Session.GetString("identity")));
+            ClothesDetailsViewModel clothesDetailsViewModel = new ClothesDetailsViewModel()
             {
-                clothes = clothes.Where(r => r.Equals(searchString));
-            }
-
-            return View(clothes);
+                Clothes = clothes,
+                User = user
+            };
+            return View(clothesDetailsViewModel);
         }
     }
 }
+//Add Data Validation

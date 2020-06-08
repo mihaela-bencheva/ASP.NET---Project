@@ -1,0 +1,48 @@
+﻿@model List<hopTropOnlineShop.Models.User>
+@{
+    ViewData["Title"] = "ShowAllUsersToAdmin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Потребители</h1>
+
+<form>
+    <table class="table" style="color: white;">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ElementAt(0).Username)
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    <form asp-controller="Login" asp-action="DeleteUserByID" method="post">
+                        <p>
+                            <input hidden type="text" name="id" value="@item.IDUser">
+                            <input type="submit" value="Изтрий" />
+                        </p>
+                    </form>
+                </td>
+                <td>
+                    <form asp-controller="Login" asp-action="SetUserToAdmin" method="post">
+                        <p>
+                            <input hidden type="text" name="id" value="@item.IDUser">
+                            <input type="submit" value="Дай администраторски права"/>
+                        </p>
+                    </form>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</form>
+

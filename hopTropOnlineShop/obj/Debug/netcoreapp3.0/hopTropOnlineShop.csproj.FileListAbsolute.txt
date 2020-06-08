@@ -172,3 +172,5 @@ C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\hopTropOnli
 C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\hopTropOnlineShop.csproj.CopyComplete
 C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\hopTropOnlineShop.dll
 C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\hopTropOnlineShop.pdb
+C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Login\ShowAllUsersToAdmin.cshtml.g.cs
+C:\Users\VikS\source\repos\hopTropOnlineShop\obj\Debug\netcoreapp3.0\Razor\Views\Cloth\Search.cshtml.g.cs

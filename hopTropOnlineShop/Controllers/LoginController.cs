@@ -70,6 +70,31 @@ namespace hopTropOnlineShop.Controllers
             HttpContext.Session.SetString("identity", (0).ToString());
             return RedirectToActionPermanent("Shop", "Cloth", null);
         }
+
+        [HttpGet("[action]")]
+        public IActionResult ShowAllUsersToAdmin()
+        {
+            if (_repository.GetUserByID(Convert.ToInt32(HttpContext.Session.GetString("identity"))).IsAdministrator == true)
+            {
+                List<User> users = _repository.GetAllUsers();
+                return View(users);
+            }
+            return RedirectToActionPermanent("Login", "Login", null);
+        }
+
+        [HttpPost("[action]")]
+        public IActionResult DeleteUserByID(int id)
+        {
+            _repository.DeleteUserByID(id);
+            return RedirectToActionPermanent("ShowAllUsersToAdmin", "Login");
+        }
+
+        [HttpPost("[action]")]
+        public IActionResult SetUserToAdmin(int id)
+        {
+            _repository.SetUserToAdminByID(id);
+            return RedirectToActionPermanent("ShowAllUsersToAdmin", "Login");
+        }
     }
 }
 
