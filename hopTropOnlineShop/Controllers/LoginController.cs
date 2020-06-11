@@ -47,7 +47,7 @@ namespace hopTropOnlineShop.Controllers
                         return RedirectToActionPermanent("Index", "Home", null);
                     }
                 }
-                return Ok();
+                return RedirectToActionPermanent("Login", "Login", null);
             }
             return View();
         }
