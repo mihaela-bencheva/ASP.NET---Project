@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-//using System.Data.Entity;
 using hopTropOnlineShop.Models;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using Microsoft.EntityFrameworkCore;

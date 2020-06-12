@@ -33,10 +33,6 @@ namespace hopTropOnlineShop.Controllers
         public IActionResult PrintFromBasket()
         {
             string[] clothesIds = (HttpContext.Session.GetString("cart") ?? string.Empty).Split(',', StringSplitOptions.RemoveEmptyEntries);
-            //if (clothesIds.Length == 0)
-            //{
-            //    return BadRequest();
-            //}
 
             List<Cloth> clothes = new List<Cloth>();
             double sum = 0;

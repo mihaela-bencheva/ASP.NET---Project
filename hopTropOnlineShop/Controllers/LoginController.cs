@@ -43,7 +43,6 @@ namespace hopTropOnlineShop.Controllers
                     if (u.Password == loginUser.Password && u.Username == loginUser.Username)
                     {
                         HttpContext.Session.SetString("identity", u.IDUser.ToString());
-                        //HttpContext.Session.GetString("identity");
                         return RedirectToActionPermanent("Index", "Home", null);
                     }
                 }

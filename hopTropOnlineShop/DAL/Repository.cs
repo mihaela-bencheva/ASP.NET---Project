@@ -20,22 +20,6 @@ namespace hopTropOnlineShop.DAL
             _context.Clothes.Add(cloth);
             _context.SaveChanges();
         }
-
-        // public bool CreateUser(User user)
-        // {
-        //     _context.Users.Add(user);
-        //     _context.SaveChanges();
-        //     return true;
-        // }
-
-        //// public List<Cloth> Test() => _context.Clothes.Where(x => x.UserId == 2).ToList();
-
-        // public List<User> GetAllUser()
-        // {
-        //     var users_con = _context.Users;
-        //     List<User> users = users_con.ToList();
-        //     return users;
-        // }
         public Cloth GetClothById(int id)
         {
             Cloth cloth = _context.Clothes.FirstOrDefault(x => x.IDCloth == id);
@@ -91,7 +75,6 @@ namespace hopTropOnlineShop.DAL
             {
                 _context.Entry(user).State = EntityState.Deleted;
                 _context.SaveChanges();
-               // _context.Users.Remove(user);
             }
         }
 
